@@ -26,9 +26,6 @@ yaml_file_path = "create_pipeline_catalog_schemas.yaml"
 with open(yaml_file_path, 'r') as f:
     catalog_data = yaml.safe_load(f)
 
-with open(yaml_file_path, 'r') as f:
-    catalog_data = yaml.safe_load(f)
-
 # Check for correct YAML structure
 if not catalog_data or 'catalogs' not in catalog_data or catalog_data['catalogs'] is None:
     raise ValueError("YAML file is missing the 'catalogs' key or is empty.")
