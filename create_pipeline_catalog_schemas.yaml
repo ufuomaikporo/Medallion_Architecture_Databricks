@@ -1,0 +1,44 @@
+catalogs:
+  pipeline_catalog:
+    # --------------------------
+    # Catalog-level governance
+    # --------------------------
+    owner: "ufuoma.ikporo@gmail.com"
+    steward: "data_platform_team"
+    purpose: "pipeline_benchmarking"
+    domain: "product_development"
+    environment: "dev"
+    data_sensitivity: "confidential"
+    classification: "client_operational_geospatial"
+    regulation: "none"
+    project: "IRAS_7"
+    tags_version: "v1.1"
+  
+    # --------------------------
+    # Schema-level governance
+    # --------------------------
+    schemas:
+      bronze:
+        quality: "bronze"
+        purpose: "raw_ingestion"
+        pipeline_type: "batch"
+        retention_policy: "90_days"
+        data_sensitivity: "confidential"
+        classification: "client_operational_geospatial"
+
+      silver:
+        quality: "silver"
+        purpose: "cleaned_transformed"
+        pipeline_type: "batch"
+        retention_policy: "180_days"
+        data_sensitivity: "confidential"
+        classification: "client_operational_geospatial"
+
+      gold:
+        quality: "gold"
+        purpose: "curated_analytics"
+        pipeline_type: "batch"
+        retention_policy: "365_days"
+        data_sensitivity: "confidential"
+        classification: "client_operational_geospatial"
+        sla: "24h"
