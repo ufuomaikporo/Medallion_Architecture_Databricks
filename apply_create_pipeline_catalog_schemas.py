@@ -22,7 +22,7 @@ print("✅ Catalog and schemas created.")
 # --------------------------
 # Load YAML file
 # --------------------------
-yaml_file_path = "pipeline_catalog_oil_data.yaml"
+yaml_file_path = "create_pipeline_catalog_schemas.yaml"
 with open(yaml_file_path, 'r') as f:
     catalog_data = yaml.safe_load(f)
 
